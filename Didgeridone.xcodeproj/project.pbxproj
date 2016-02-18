@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820641BC1C762DC000AC720A /* toDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820641BB1C762DC000AC720A /* toDoItem.swift */; };
 		822C938F1C75524E00A3791B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822C938E1C75524E00A3791B /* AppDelegate.swift */; };
 		822C93941C75524E00A3791B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822C93921C75524E00A3791B /* Main.storyboard */; };
 		822C93971C75524E00A3791B /* Didgeridone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 822C93951C75524E00A3791B /* Didgeridone.xcdatamodeld */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		820641BB1C762DC000AC720A /* toDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toDoItem.swift; sourceTree = "<group>"; };
 		822C938B1C75524E00A3791B /* Didgeridone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Didgeridone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		822C938E1C75524E00A3791B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		822C93931C75524E00A3791B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				82DC8BB71C7621E100730526 /* DetailViewController.swift */,
 				82DC8BB91C7621FA00730526 /* EditViewController.swift */,
 				82DC8BBB1C7622C500730526 /* Database.swift */,
+				820641BB1C762DC000AC720A /* toDoItem.swift */,
 			);
 			path = Didgeridone;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82DC8BB41C76216900730526 /* LoginViewController.swift in Sources */,
+				820641BC1C762DC000AC720A /* toDoItem.swift in Sources */,
 				822C93971C75524E00A3791B /* Didgeridone.xcdatamodeld in Sources */,
 				822C93C01C757F2E00A3791B /* api.swift in Sources */,
 				82DC8BB81C7621E100730526 /* DetailViewController.swift in Sources */,

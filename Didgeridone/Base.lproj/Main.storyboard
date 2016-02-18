@@ -67,12 +67,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="PWM-Z1-hZd"/>
                     <connections>
+                        <outlet property="email" destination="C6Q-v0-tpZ" id="HaO-vU-800"/>
+                        <outlet property="loginButton" destination="Cqi-2n-kWu" id="XgW-jZ-4mW"/>
+                        <outlet property="password" destination="Z21-2Z-dGI" id="kYw-GX-mkl"/>
                         <segue destination="29g-u9-66y" kind="presentation" id="uz3-np-lKR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9X1-f0-Hyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="893"/>
+            <point key="canvasLocation" x="36" y="861"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lnH-t3-P8Q">
@@ -207,6 +210,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ClE-UI-hJm"/>
+        <segue reference="yJn-Im-fR1"/>
     </inferredMetricsTieBreakers>
 </document>
