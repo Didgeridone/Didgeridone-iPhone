@@ -34,7 +34,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z21-2Z-dGI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C6Q-v0-tpZ">
+                                <rect key="frame" x="44" y="168" width="512" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z21-2Z-dGI">
                                 <rect key="frame" x="44" y="221" width="512" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -45,12 +50,10 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="29g-u9-66y" kind="show" id="cdS-Nf-Uk3"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C6Q-v0-tpZ">
-                                <rect key="frame" x="44" y="168" width="512" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -70,7 +73,6 @@
                         <outlet property="email" destination="C6Q-v0-tpZ" id="HaO-vU-800"/>
                         <outlet property="loginButton" destination="Cqi-2n-kWu" id="XgW-jZ-4mW"/>
                         <outlet property="password" destination="Z21-2Z-dGI" id="kYw-GX-mkl"/>
-                        <segue destination="29g-u9-66y" kind="presentation" id="uz3-np-lKR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9X1-f0-Hyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="S2p-cY-XkJ" style="IBUITableViewCellStyleDefault" id="w6c-tq-1VL" customClass="tableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="S2p-cY-XkJ" style="IBUITableViewCellStyleDefault" id="w6c-tq-1VL">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w6c-tq-1VL" id="Fvy-cJ-GaQ">
@@ -118,28 +120,21 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="fur-HF-WWC" kind="show" id="ibc-8d-vVv"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="lHU-fo-PWE" id="OQN-TH-N3D"/>
-                            <outlet property="delegate" destination="lHU-fo-PWE" id="ULZ-fS-UQs"/>
-                        </connections>
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Kbs-lR-0j6">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="f8X-uZ-HQN"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="AYo-io-ky9">
                             <connections>
-                                <segue destination="070-K9-Fz5" kind="show" id="yJn-Im-fR1"/>
+                                <segue destination="070-K9-Fz5" kind="show" id="vQa-OW-HCQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="w6c-tq-1VL" id="PBr-rS-ahV"/>
+                        <segue destination="fur-HF-WWC" kind="show" id="iZ5-UF-lx7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xE3-VB-oMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -213,6 +208,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yJn-Im-fR1"/>
+        <segue reference="vQa-OW-HCQ"/>
     </inferredMetricsTieBreakers>
 </document>

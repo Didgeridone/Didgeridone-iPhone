@@ -20,7 +20,7 @@ class TableViewController: UITableViewController{
         
         self.getData()
         
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        //tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -75,7 +75,7 @@ class TableViewController: UITableViewController{
         return toDoItems.count
     }
     
-    func tableView(tableView: UITableView,
+    override func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCellWithIdentifier("cell",
                 forIndexPath: indexPath)

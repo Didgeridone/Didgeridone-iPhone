@@ -6,9 +6,10 @@
 //  Copyright © 2016 Galvanize. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
-class toDoItem: NSObject {
+class ToDoItem {
+   
     // A text description of this item.
     var text: String
     
