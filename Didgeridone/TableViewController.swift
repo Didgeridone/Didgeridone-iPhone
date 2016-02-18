@@ -12,6 +12,8 @@ import SwiftyJSON
 
 class TableViewController: UITableViewController{
     
+    @IBOutlet weak var logout: UIBarButtonItem!
+    
     //@IBOutlet weak var tableView: UITableViewCell!
     var toDoItems = [ToDoItem]()
     
@@ -42,7 +44,10 @@ class TableViewController: UITableViewController{
     }
 
     // MARK: - Table view data source
-
+    @IBAction func buttonClicked (sender: UIButton){
+        print("SWIFT SMB")
+    }
+    
     func getData() {
         
         Alamofire.request(.GET, "https://didgeridone.herokuapp.com/task/56c3ad2db2273e8c7c9d3612").validate().responseJSON { response in

@@ -16,9 +16,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("VIEW LOADING")
+        
 
         // Do any additional setup after loading the view.
     }
@@ -28,9 +29,9 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    func authenticate(){
-//    
-//    
+    @IBAction func buttonClicked(sender: UIButton!) {
+        print("DOES THIS RUN? \(email.text!)")
+    
 //        enum defaultsKeys {
 //            static let userId = "firstStringKey"
 //            static let token = "secondStringKey"
@@ -42,20 +43,17 @@ class LoginViewController: UIViewController {
 //        defaults.setValue("Another String Value", forKey: defaultsKeys.token)
 //        
 //        defaults.synchronize()
-//
-//        let parameters = [
-//            "email": email,
-//            "password": password
-//        ]
-//        Alamofire.request(.POST, "https://didgeridone.herokuapp.com/auth/login", parameters: parameters, encoding: .JSON  ){
-//            .responseJSON {(request, response, JSON, error) in
-//                println(request)
-//                println(response)
-//                println(JSON)
-//                println(error)
-//            }
-//        }
-//    }
+
+        let parameters = [
+                    "email": email.text!,
+                    "password": password.text!
+                ]
+        
+                Alamofire.request(.POST, "https://didgeridone.herokuapp.com/auth/login", parameters: parameters, encoding: .JSON  )
+                    .responseJSON {(response) in
+                       print(response)
+                    }
+        }
     
 
     /*

@@ -15,6 +15,7 @@
 		822C93991C75524E00A3791B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 822C93981C75524E00A3791B /* Assets.xcassets */; };
 		822C93A71C75524E00A3791B /* DidgeridoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822C93A61C75524E00A3791B /* DidgeridoneTests.swift */; };
 		822C93B21C75524E00A3791B /* DidgeridoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822C93B11C75524E00A3791B /* DidgeridoneUITests.swift */; };
+		82B8DB191C76822000BBE0ED /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B8DB181C76822000BBE0ED /* MapKit.framework */; };
 		82DC8BB41C76216900730526 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC8BB31C76216900730526 /* LoginViewController.swift */; };
 		82DC8BB61C7621A100730526 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC8BB51C7621A100730526 /* TableViewController.swift */; };
 		82DC8BB81C7621E100730526 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC8BB71C7621E100730526 /* DetailViewController.swift */; };
@@ -56,6 +57,7 @@
 		822C93AD1C75524E00A3791B /* DidgeridoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DidgeridoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		822C93B11C75524E00A3791B /* DidgeridoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidgeridoneUITests.swift; sourceTree = "<group>"; };
 		822C93B31C75524E00A3791B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82B8DB181C76822000BBE0ED /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		82DC8BB31C76216900730526 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82DC8BB51C7621A100730526 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		82DC8BB71C7621E100730526 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82B8DB191C76822000BBE0ED /* MapKit.framework in Frameworks */,
 				351F3BA0A50B5AC5F12AFF48 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +95,7 @@
 		3EB32D737C34F8766EA3F25A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82B8DB181C76822000BBE0ED /* MapKit.framework */,
 				0057EC15C6ACF1E95BD9BECF /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -235,6 +239,11 @@
 				TargetAttributes = {
 					822C938A1C75524E00A3791B = {
 						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					822C93A11C75524E00A3791B = {
 						CreatedOnToolsVersion = 7.2.1;
