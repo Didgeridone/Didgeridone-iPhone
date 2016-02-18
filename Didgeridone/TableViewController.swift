@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class TableViewController: UITableViewController {
-
+class TableViewController: UITableViewController{
+    
+    //@IBOutlet weak var tableView: UITableViewCell!
+    var toDoItems = [ToDoItem]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
