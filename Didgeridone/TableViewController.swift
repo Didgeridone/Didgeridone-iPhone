@@ -20,7 +20,7 @@ class TableViewController: UITableViewController{
         
         self.getData()
         
-        //tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         // Do any additional setup after loading the view, typically from a nib.
         

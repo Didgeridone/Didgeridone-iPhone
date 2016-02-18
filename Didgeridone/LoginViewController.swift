@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +29,20 @@ class LoginViewController: UIViewController {
     }
     
 //    func authenticate(){
+//    
+//    
+//        enum defaultsKeys {
+//            static let userId = "firstStringKey"
+//            static let token = "secondStringKey"
+//        }
+//        
+//        let defaults = NSUserDefaults.standardUserDefaults()
+//        
+//        defaults.setValue("Some String Value", forKey: defaultsKeys.userId)
+//        defaults.setValue("Another String Value", forKey: defaultsKeys.token)
+//        
+//        defaults.synchronize()
+//
 //        let parameters = [
 //            "email": email,
 //            "password": password
@@ -41,7 +56,7 @@ class LoginViewController: UIViewController {
 //            }
 //        }
 //    }
-//    
+    
 
     /*
     // MARK: - Navigation
