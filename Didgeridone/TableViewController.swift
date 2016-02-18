@@ -12,6 +12,17 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.getData()
+        
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        if toDoItems.count > 0 {
+            return
+        }
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -26,6 +37,28 @@ class TableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+
+    func getData() {
+        
+        Alamofire.request(.GET, "https://didgeridone.herokuapp.com/task/56c3ad2db2273e8c7c9d3612").validate().responseJSON { response in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    let tasks = json["user"]["tasks"]
+                    
+                    for (_, task) in tasks {
+                        self.toDoItems.append(ToDoItem(text: task["name"].stringValue))
+                    }
+                    self.tableView.reloadData()
+                    
+                }
+            case .Failure(let error):
+                print(error)
+            }
+        }
+        
+    }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections

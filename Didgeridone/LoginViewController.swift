@@ -28,8 +28,11 @@ class LoginViewController: UIViewController {
     }
     
     func authenticate(){
-        Alamofire.request(.POST, "https://didgeridone.herokuapp.com/auth/login" ){
-            .authenticate(HTTPBasic: email, password: password)
+        let parameters = [
+            "email": email,
+            "password": password
+        ]
+        Alamofire.request(.POST, "https://didgeridone.herokuapp.com/auth/login", parameters: parameters, encoding: .JSON  ){
             .responseJSON {(request, response, JSON, error) in
                 println(request)
                 println(response)

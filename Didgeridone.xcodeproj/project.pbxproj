@@ -15,7 +15,6 @@
 		822C939C1C75524E00A3791B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822C939A1C75524E00A3791B /* LaunchScreen.storyboard */; };
 		822C93A71C75524E00A3791B /* DidgeridoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822C93A61C75524E00A3791B /* DidgeridoneTests.swift */; };
 		822C93B21C75524E00A3791B /* DidgeridoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822C93B11C75524E00A3791B /* DidgeridoneUITests.swift */; };
-		822C93C01C757F2E00A3791B /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822C93BF1C757F2E00A3791B /* api.swift */; };
 		82DC8BB41C76216900730526 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC8BB31C76216900730526 /* LoginViewController.swift */; };
 		82DC8BB61C7621A100730526 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC8BB51C7621A100730526 /* TableViewController.swift */; };
 		82DC8BB81C7621E100730526 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DC8BB71C7621E100730526 /* DetailViewController.swift */; };
@@ -55,7 +54,6 @@
 		822C93AD1C75524E00A3791B /* DidgeridoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DidgeridoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		822C93B11C75524E00A3791B /* DidgeridoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidgeridoneUITests.swift; sourceTree = "<group>"; };
 		822C93B31C75524E00A3791B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		822C93BF1C757F2E00A3791B /* api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
 		82DC8BB31C76216900730526 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82DC8BB51C7621A100730526 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		82DC8BB71C7621E100730526 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 				822C939A1C75524E00A3791B /* LaunchScreen.storyboard */,
 				822C939D1C75524E00A3791B /* Info.plist */,
 				822C93951C75524E00A3791B /* Didgeridone.xcdatamodeld */,
-				822C93BF1C757F2E00A3791B /* api.swift */,
 				82DC8BB31C76216900730526 /* LoginViewController.swift */,
 				82DC8BB51C7621A100730526 /* TableViewController.swift */,
 				82DC8BB71C7621E100730526 /* DetailViewController.swift */,
@@ -280,7 +277,6 @@
 				82DC8BB41C76216900730526 /* LoginViewController.swift in Sources */,
 				820641BC1C762DC000AC720A /* toDoItem.swift in Sources */,
 				822C93971C75524E00A3791B /* Didgeridone.xcdatamodeld in Sources */,
-				822C93C01C757F2E00A3791B /* api.swift in Sources */,
 				82DC8BB81C7621E100730526 /* DetailViewController.swift in Sources */,
 				82DC8BB61C7621A100730526 /* TableViewController.swift in Sources */,
 				822C938F1C75524E00A3791B /* AppDelegate.swift in Sources */,
