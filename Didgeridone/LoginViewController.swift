@@ -17,9 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        print("VIEW LOADING")
-        
+        super.viewDidLoad()        
 
         // Do any additional setup after loading the view.
     }
@@ -30,30 +28,40 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func buttonClicked(sender: UIButton!) {
-        print("DOES THIS RUN? \(email.text!)")
-    
-//        enum defaultsKeys {
-//            static let userId = "firstStringKey"
-//            static let token = "secondStringKey"
-//        }
-//        
-//        let defaults = NSUserDefaults.standardUserDefaults()
-//        
-//        defaults.setValue("Some String Value", forKey: defaultsKeys.userId)
-//        defaults.setValue("Another String Value", forKey: defaultsKeys.token)
-//        
-//        defaults.synchronize()
-
         let parameters = [
-                    "email": email.text!,
-                    "password": password.text!
-                ]
+            "email": email.text!,
+            "password": password.text!
+        ]
         
-                Alamofire.request(.POST, "https://didgeridone.herokuapp.com/auth/login", parameters: parameters, encoding: .JSON  )
-                    .responseJSON {(response) in
-                       print(response)
+        Alamofire.request(.POST, "https://didgeridone.herokuapp.com/auth/login", parameters: parameters, encoding: .JSON  )
+            .responseJSON {(response) in
+                switch response.result {
+                case .Success:
+                    if let value = response.result.value {
+                        let data = JSON(value)
+                        let userID = data["user"]["_id"]
+                        let token = data["token"]
+                        
+//                        enum defaultsKeys {
+//                            static let userId = user
+//                            static let token = tokenId
+//                        }
+                        
+                        let defaults = NSUserDefaults.standardUserDefaults()
+                        
+                        defaults.setValue(String(userID), forKey: "UserID")
+                        defaults.setValue(String(token), forKey: "Token")
+                        defaults.synchronize()
                     }
+                case .Failure(let error):
+                    print(error)
+                
+                }
+
+            self.performSegueWithIdentifier("tasks", sender: sender)
+            
         }
+    }
     
 
     /*

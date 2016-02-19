@@ -49,8 +49,13 @@ class TableViewController: UITableViewController{
     }
     
     func getData() {
+
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let userID = defaults.stringForKey("UserID")
+//        let token = defaults.stringForKey("Token")
+        print(userID!)
         
-        Alamofire.request(.GET, "https://didgeridone.herokuapp.com/task/56c3ad2db2273e8c7c9d3612").validate().responseJSON { response in
+        Alamofire.request(.GET, "https://didgeridone.herokuapp.com/task/\(userID!)").validate().responseJSON { response in
             switch response.result {
             case .Success:
                 if let value = response.result.value {

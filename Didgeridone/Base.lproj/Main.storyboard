@@ -73,7 +73,7 @@
                         <outlet property="email" destination="C6Q-v0-tpZ" id="HaO-vU-800"/>
                         <outlet property="loginButton" destination="Cqi-2n-kWu" id="XgW-jZ-4mW"/>
                         <outlet property="password" destination="Z21-2Z-dGI" id="kYw-GX-mkl"/>
-                        <segue destination="29g-u9-66y" kind="modal" id="5ce-fw-xaU"/>
+                        <segue destination="29g-u9-66y" kind="modal" identifier="tasks" id="5ce-fw-xaU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9X1-f0-Hyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
