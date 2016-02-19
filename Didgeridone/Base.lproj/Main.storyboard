@@ -121,22 +121,19 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="fur-HF-WWC" kind="show" identifier="detailSegue" id="iFr-ss-SYr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Kbs-lR-0j6">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="f8X-uZ-HQN"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AYo-io-ky9">
-                            <connections>
-                                <segue destination="070-K9-Fz5" kind="show" id="vQa-OW-HCQ"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="logout" destination="f8X-uZ-HQN" id="uYk-Ce-GhF"/>
-                        <segue destination="fur-HF-WWC" kind="show" id="iZ5-UF-lx7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xE3-VB-oMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -155,10 +152,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="poB-mj-U8r">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="poB-mj-U8r">
                                 <rect key="frame" x="20" y="87" width="560" height="318"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="318" id="gPB-T5-aJb"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="fur-HF-WWC" id="xpJ-Rj-5Tu"/>
+                                </connections>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heO-bf-q1a">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heO-bf-q1a">
                                 <rect key="frame" x="20" y="433" width="555" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -166,6 +169,16 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YI0-ho-Sr0" firstAttribute="top" secondItem="heO-bf-q1a" secondAttribute="bottom" constant="102" id="2zO-LP-o5H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="heO-bf-q1a" secondAttribute="trailing" constant="5" id="AMM-VL-rJt"/>
+                            <constraint firstItem="poB-mj-U8r" firstAttribute="top" secondItem="5f1-c4-cxs" secondAttribute="bottom" constant="23" id="Kgl-hS-Co8"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="poB-mj-U8r" secondAttribute="leading" id="M31-2r-9bF"/>
+                            <constraint firstItem="heO-bf-q1a" firstAttribute="top" secondItem="poB-mj-U8r" secondAttribute="bottom" constant="28" id="M9s-Rr-kpz"/>
+                            <constraint firstItem="poB-mj-U8r" firstAttribute="leading" secondItem="heO-bf-q1a" secondAttribute="trailing" constant="-555" id="VbO-Ga-8Pp"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="heO-bf-q1a" secondAttribute="leading" id="Vh9-cW-yXR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="poB-mj-U8r" secondAttribute="trailing" id="foN-o3-vcB"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="KO4-1V-X7y">
@@ -175,6 +188,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="poB-mj-U8r" id="Hgb-oo-haR"/>
+                        <outlet property="nameLabel" destination="heO-bf-q1a" id="XnC-Bn-Rrd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4nx-Dv-ROX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,7 +226,4 @@
             <point key="canvasLocation" x="1577" y="540"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="vQa-OW-HCQ"/>
-    </inferredMetricsTieBreakers>
 </document>
